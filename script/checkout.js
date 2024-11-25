@@ -52,7 +52,7 @@ let cartSummaryHTML = '';
                     <div class="delivery-option">
                     <input type="radio" checked
                         class="delivery-option-input"
-                        name="delivery-option-1-${matchingProduct.id}">
+                        name="delivery-option-${matchingProduct.id}"> //for delivery box simultaneously
                     <div>
                         <div class="delivery-option-date">
                         Tuesday, June 21
@@ -65,7 +65,7 @@ let cartSummaryHTML = '';
                     <div class="delivery-option">
                     <input type="radio"
                         class="delivery-option-input"
-                        name="delivery-option-1-${matchingProduct.id}">
+                        name="delivery-option-${matchingProduct.id}">
                     <div>
                         <div class="delivery-option-date">
                         Wednesday, June 15
@@ -78,7 +78,7 @@ let cartSummaryHTML = '';
                     <div class="delivery-option">
                     <input type="radio"
                         class="delivery-option-input"
-                        name="delivery-option-1-${matchingProduct.id}">
+                        name="delivery-option-${matchingProduct.id}">
                     <div>
                         <div class="delivery-option-date">
                         Monday, June 13
@@ -97,3 +97,9 @@ let cartSummaryHTML = '';
 
 document.querySelector('.js-order-summary').innerHTML = cartSummaryHTML;
 
+document.querySelectorAll('.js-delete-link')
+    .forEach((link) => {
+        link.addEventListener('click' , () => {
+            console.log('delete');
+        });
+    });
